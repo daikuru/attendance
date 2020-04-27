@@ -3,7 +3,7 @@
 // キャッシュ名とキャッシュファイルの指定
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
-	'/attendance.txt'
+	'/attendance/attendance.txt',
 ];
 
 // インストール処理
@@ -12,9 +12,7 @@ self.addEventListener('install', function(event) {
         caches
             .open(CACHE_NAME)
             .then(function(cache) {
-                return cache.addAll([
-		'/attendance/attendance.txt',
-		]);
+                return cache.addAll(urlsToCache);
             })
     );
 });
