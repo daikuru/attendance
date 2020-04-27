@@ -4,6 +4,7 @@
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
 	'/attendance/attendance.txt',
+	'/attendance/leaving.txt',
 ];
 
 // インストール処理
