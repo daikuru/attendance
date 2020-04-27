@@ -1,4 +1,4 @@
-const fs = require('./fs');
+const fs = require('fs');
 
 const attendanceButtonId = document.getElementById("attendance");
 const leavingButtonId = document.getElementById("leaving");
