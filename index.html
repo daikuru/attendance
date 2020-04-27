@@ -6,19 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<script src="./js/node.js"></script>-->
     <link rel="manifest" href="/attendance/manifest.json">
-    <?php
-      if($_POST['attendanceInfo']=="出勤"){
-      $fp = fopen("/attendance/attendance.txt", "a");
-      fwrite($fp, .date("Y/m/d H:i:s")."¥n");
-      fclose($fp);
-      }elseif($_POST['attendanceInfo']=="退勤"){
-      $fp = fopen("/attendance/leaving.txt", "a");
-      fwrite($fp, .date("Y/m/d H:i:s")."¥n");
-      fclose($fp);
-      }else{
-
-      }
-    ?>
     <title>出退勤時間保存</title>
   </head>
   <body>
@@ -26,7 +13,7 @@
     <input type="button" id="attendance" value="出勤" />
     <input type="button" id="leaving" value="退勤" />
 
-    <form action="" method="post">
+    <form action="/attendance/fileInfo.php" method="post">
       <input type="submit" name="attendanceInfo" value="出勤">
       <input type="submit" name="attendanceInfo" value="退勤">
     </form>
