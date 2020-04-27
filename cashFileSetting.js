@@ -1,7 +1,7 @@
 // const fs = require('fs');
 
-const attendanceButtonId = document.getElementById("attendance");
-const leavingButtonId = document.getElementById("leaving");
+// const attendanceButtonId = document.getElementById("attendance");
+// const leavingButtonId = document.getElementById("leaving");
 
 // キャッシュファイルの指定
 // 出勤キャッシュ
@@ -29,6 +29,7 @@ self.addEventListener('install', function(event) {
     );
 });
 
+/*
 attendanceButtonId.addEventListener("click", function() {
     var now = new Date();
     var Year = now.getFullYear();
@@ -39,6 +40,7 @@ attendanceButtonId.addEventListener("click", function() {
     fs.appendFileSync('/daikuru.github.io/attendance/attendance.txt', Year + "/" + Month + "/" + Date + "日" + Hour + ":" + Min + ":" );
     console.log('attendance.txtに追記されました');
 });
+*/
 
 /*
 self.addEventListener('fetch', event => {
