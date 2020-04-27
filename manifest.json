@@ -1,7 +1,7 @@
 {
     "short_name": "PWA",
     "name": "attendanceapp",
-    "display": "attendance",
+    "display": "standalone",
     "start_url": "index.html",
     "icons": [
         {
