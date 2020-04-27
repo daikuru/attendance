@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 　　<!-- vue.js　-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="manifest" href="manifest.json">
     <title>出退勤時間保存</title>
   </head>
   <body>
     <h1>出退勤</h1>
+    <h2>{{ message }}</h2>
     <input type="button" id="attendance" value="出勤" />
     <input type="button" id="leaving" value="退勤" />
     
@@ -21,7 +23,18 @@
         console.log('ServiceWorker registration failed: ', err);
     });
     }
-    console.log('ServiceWorker registration successful with scope: ');
+    <!-- vue.jsの設定関係 -->
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!'
+      },
+      methods: {
+        reverseMessage: function () {
+          this.message = this.message.split('').reverse().join('')
+        }
+      }
+    });
     </script>
   </body>
 </html>
