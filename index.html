@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -11,6 +12,11 @@
     <h1>出退勤</h1>
     <input type="button" id="attendance" value="出勤" />
     <input type="button" id="leaving" value="退勤" />
+
+    <form action="/fileInfo.php" method="post">
+      <input type="submit" name="attendanceInfo" value="出勤">
+      <input type="submit" name="attendanceInfo" value="退勤">
+    </form>
     <script>
     <!-- service workerの登録関係 -->
     if ('serviceWorker' in navigator) {
