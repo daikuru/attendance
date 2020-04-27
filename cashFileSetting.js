@@ -3,7 +3,7 @@
 // キャッシュ名とキャッシュファイルの指定
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
-	'/.github.io/',
+	'/daikuru.github.io/',
 ];
 
 // インストール処理
