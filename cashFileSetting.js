@@ -10,8 +10,8 @@ var CACHE_ATTENDANCE = 'attendance-cache';
 var CACHE_LEAVING = 'leaving-cache';
 var urlsToCache = [
     '/daikuru.github.io/attendance/',
-    '/daikuru.github.io/attendance/attendance.txt/,
-    '/daikuru.github.io/attendance/leaving.txt/,
+    '/daikuru.github.io/attendance/attendance.txt/',
+    '/daikuru.github.io/attendance/leaving.txt/',
 ];
 
 // インストール処理
