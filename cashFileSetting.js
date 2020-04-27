@@ -5,9 +5,12 @@ const leavingButtonId = document.getElementById("leaving");
 
 // キャッシュファイルの指定
 // 出勤キャッシュ
-var CACHE_ATTENDANCE = 'attendance-cache';
+// var CACHE_ATTENDANCE = 'attendance-cache';
 // 退勤キャッシュ
-var CACHE_LEAVING = 'leaving-cache';
+// var CACHE_LEAVING = 'leaving-cache';
+
+var CACHE_NAME = 'attendance-cache';
+
 var urlsToCache = [
     '/daikuru.github.io/attendance/',
     '/daikuru.github.io/attendance/attendance.txt/',
@@ -17,13 +20,7 @@ var urlsToCache = [
 // インストール処理
 self.addEventListener('install', function(event) {
     event.waitUntil(
-        caches.open(CACHE_ATTENDANCE)
-          .then(
-          function(cache){
-              return cache.addAll(urlsToCache); // 指定したリソースをキャッシュへ追加
-              // 1つでも失敗したらService Workerのインストールはスキップされる
-          })
-        caches.open(CACHE_LEAVING)
+        caches.open(CACHE_NAME)
           .then(
           function(cache){
               return cache.addAll(urlsToCache); // 指定したリソースをキャッシュへ追加
