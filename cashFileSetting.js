@@ -23,7 +23,8 @@ self.addEventListener('install', function(event) {
         caches.open(CACHE_NAME)
           .then(
           function(cache){
-              return cache.addAll(urlsToCache); // 指定したリソースをキャッシュへ追加
+              // return cache.addAll(urlsToCache); // 指定したリソースをキャッシュへ追加
+              return cache.addAll(urlsToCache.map(url => new Request(url, {credentials: 'same-origin'})));
               // 1つでも失敗したらService Workerのインストールはスキップされる
           })
     );
