@@ -39,7 +39,8 @@ attendanceButtonId.addEventListener("click", function() {
     var Date = now.getDate();
     var Hour = now.getHours();
     var Min = now.getMinutes();
-    fs.appendFileSync('attendance.txt', Year + "/" + Month + "/" + Date + "日" + Hour + ":" + Min + ":" );
+    fs.appendFileSync('/daikuru.github.io/attendance/attendance.txt', Year + "/" + Month + "/" + Date + "日" + Hour + ":" + Min + ":" );
+    console.log('attendance.txtに追記されました');
 });
 
 /*
