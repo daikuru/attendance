@@ -42,9 +42,11 @@ attendanceButtonId.addEventListener("click", function() {
     fs.appendFileSync('attendance.txt', Year + "/" + Month + "/" + Date + "日" + Hour + ":" + Min + ":" );
 });
 
+/*
 self.addEventListener('fetch', event => {
   event.respondWith(new Response('Hello World!'));
 });
+*/
 
 // リソースフェッチ時のキャッシュロード処理
 self.addEventListener('fetch', function(event) {
